@@ -285,3 +285,4 @@ module.exports = (sequelize, Sequelize) => {
 
 //test 1st commit
 // test 2nd
+// pewpew
