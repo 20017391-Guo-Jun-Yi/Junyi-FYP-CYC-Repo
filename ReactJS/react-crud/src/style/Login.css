@@ -1,0 +1,36 @@
+.input-group {
+    font-weight: bold;
+    display: flex;
+    width: 10cm;
+    margin-bottom: 20px;
+}
+
+.Welcomeback{
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.Loginform {
+    position: relative;
+    left: 12cm;
+    margin-top: 50px;
+}
+
+.inputlogin{
+    margin-right: 35px;
+}
+
+.btn-Login2{
+    border-color:black;
+    color: white;
+    background-color: #203864;
+    position: relative;
+    left: 5cm;
+}
+.btn-back2{
+    border-color:black;
+    color: white;
+    background-color: #203864;
+    position: relative;
+    left: 5cm;
+}

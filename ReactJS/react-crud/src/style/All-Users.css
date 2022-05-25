@@ -1,0 +1,101 @@
+    .styled-table thead tr {
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 30px;
+    }
+
+    .styled-table {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+
+    .btn {
+        border: none;
+        color: white;
+        padding: 5px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .btn-view {
+        background-color: #e7e7e7;
+        color: black;
+        
+    }
+    
+    .btn-Add {
+        background-color: #203864;
+        position: relative;
+        left: 28.7cm;
+    }
+
+    .btn-edit {
+        background-color: #008cba;
+    }
+
+    .SearchBar {
+        position: relative;
+        left: 24.5cm;
+    }
+
+    .btn-Search {
+        background-color: #203864;
+        position: relative;
+        left: 25cm;
+    }
+
+    .btn-Home {
+        border-color: black;
+        color: white;
+        background-color: #203864;
+        position: absolute;
+        left: 145px;
+        top: 20px
+    }
+
+    .dot {
+        position: absolute;
+        height: 52px;
+        width: 52px;
+        background-color: white;
+        border-radius: 50%;
+        right: 30px;
+        top: 10px;
+    }
+
+    .human-logo {
+        position: absolute;
+        right: 0.5cm;
+        top: 5px;
+        height: 8vmin;
+        width: 10vmin;
+        size: fixed;
+    }
+
+    .btn-back {
+        background-color: #203864;
+        position: relative;
+        left: 28.7cm;
+    }
