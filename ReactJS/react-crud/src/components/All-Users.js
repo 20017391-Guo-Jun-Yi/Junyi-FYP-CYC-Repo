@@ -98,7 +98,7 @@ export default class AllUserList extends Component {
                                             <button className="btn btn-view">View</button>
                                         </Link>
                                         <Link to={"/home/edituser/" + User.user_id}>
-                                        <button className="btn btn-edit">Edit</button>
+                                            <button className="btn btn-edit">Edit</button>
                                         </Link>
                                     </tr>
                                 </tr>

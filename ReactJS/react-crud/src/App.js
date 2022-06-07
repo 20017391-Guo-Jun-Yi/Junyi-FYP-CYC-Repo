@@ -6,7 +6,9 @@ import Logo from './pictures/CYC-Logo.png';
 import AllUserList from "./components/All-Users";
 import FrontPage from "./components/Front-Page";
 import LoginPage from "./components/Login-page";
-
+import PlaygroundDisplay from "./components/Playground-Display";
+import PlaygroundDetails from "./components/Playground-Details";
+import PlaygroundCreate from "./components/Playground-Create";
 
 class App extends Component {
   render() {
@@ -21,7 +23,10 @@ class App extends Component {
           <Routes>
             <Route exact path="/" element={<FrontPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
-            <Route exact path="/home/AllUsers" element={<AllUserList />} />      
+            <Route exact path="/home/AllUsers" element={<AllUserList />} />
+            <Route exact path="/playground" element={<PlaygroundDisplay />} />
+            <Route path="/playground/index/:id" element={<PlaygroundDetails />} />
+            <Route exact path="/playground/new" element={<PlaygroundCreate />} />
           </Routes>
         </div>  
       </div>
