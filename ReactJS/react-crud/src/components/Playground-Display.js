@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PlaygroundDataService from "../services/playground.service";
 import "../style/Playground.css";
 import human from "../pictures/human.png";
-import playgroundimg from "../pictures/playground.png";
+import playgrounding from "../pictures/playground.png";
 import { Collapse } from "bootstrap";
 
 export default class PlaygroundDisplay extends Component {
@@ -147,7 +147,7 @@ export default class PlaygroundDisplay extends Component {
                 {Playgrounds && Playgrounds.map((Playground, index) => {
                     return (
                         <div class="card" key={Playground.playground_id}>
-                            <img src={playgroundimg} alt="playground" className="playground-logo" />
+                            <img src={playgrounding} alt="playground" className="playground-logo" />
                             <div class="container">
                                 <Link to={"/playground/index/" + Playground.playground_id}>
                                     <h2>{Playground.playground_title}</h2>
