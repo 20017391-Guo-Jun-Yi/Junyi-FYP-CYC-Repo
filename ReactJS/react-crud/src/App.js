@@ -24,9 +24,9 @@ class App extends Component {
             <Route exact path="/" element={<FrontPage />} />
             <Route exact path="/Login" element={<LoginPage />} />
             <Route exact path="/home/AllUsers" element={<AllUserList />} />
-            <Route exact path="/playground" element={<PlaygroundDisplay />} />
-            <Route path="/playground/index/:id" element={<PlaygroundDetails />} />
-            <Route exact path="/playground/new" element={<PlaygroundCreate />} />
+            <Route exact path="/home/playground" element={<PlaygroundDisplay />} />
+            <Route path="/home/playground/index/:id" element={<PlaygroundDetails />} />
+            <Route exact path="/home/playground/new" element={<PlaygroundCreate />} />
           </Routes>
         </div>  
       </div>

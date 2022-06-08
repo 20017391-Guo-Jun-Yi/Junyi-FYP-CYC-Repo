@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PlaygroundDataService from "../services/playground.service";
+import DataService from "../services/cyc-fyp.service";
 import "../style/Playground.css";
 import human from "../pictures/human.png";
 import playgrounding from "../pictures/playground.png";
@@ -58,7 +58,7 @@ export default class PlaygroundDisplay extends Component {
             return;
         }
 
-        PlaygroundDataService.findByTitle(this.state.searchPlayground)
+        DataService.findByTitle(this.state.searchPlayground)
             .then(response => {
                 this.setState({
                     Playgrounds: response.data
@@ -87,9 +87,9 @@ export default class PlaygroundDisplay extends Component {
         });
     }
 
-    // Collect Users data
+    // Collect playgrounds data
     retrievePlaygrounds() {
-        PlaygroundDataService.getAll()
+        DataService.getAllPlaygrounds()
             .then(response => {
                 // Only update when there is add/delete action
                 if (this.state.Playgrounds.length != response.data.length) {
@@ -139,7 +139,7 @@ export default class PlaygroundDisplay extends Component {
                 <hr size="4" width="100%" />
                 <text>
                     Home -&gt; All Playgrounds
-                    <a href="/playground/new" type="button" class="btn btn-primary btn-Add addPlayground">Add Playground</a>
+                    <a href="/home/playground/new" type="button" class="btn btn-primary btn-Add addPlayground">Add Playground</a>
                 </text>
 
                 <button class="btn btn-primary" onClick={this.sortByTitle}>Sort</button>
@@ -149,7 +149,7 @@ export default class PlaygroundDisplay extends Component {
                         <div class="card" key={Playground.playground_id}>
                             <img src={playgrounding} alt="playground" className="playground-logo" />
                             <div class="container">
-                                <Link to={"/playground/index/" + Playground.playground_id}>
+                                <Link to={"/home/playground/index/" + Playground.playground_id}>
                                     <h2>{Playground.playground_title}</h2>
                                 </Link>
                             </div>

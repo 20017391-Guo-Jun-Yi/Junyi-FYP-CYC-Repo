@@ -3,7 +3,7 @@ const playgrounds = db.tables[1];
 const Op = db.Sequelize.Op;
 
 // Retrieve all Playgrounds Data from the database.
-const findAll = (req, res) => {
+const findAllPlaygrounds = (req, res) => {
     playgrounds.findAll({})
         .then(data => {
             res.send(data);
@@ -16,7 +16,7 @@ const findAll = (req, res) => {
 };
 
 // Retrieve Single Playground Data from the database
-const find = (req, res) => {
+const findPlaygrounds = (req, res) => {
     const id = Number(req.params.id)
     playgrounds.findByPk(id)
         .then(data => {
@@ -29,7 +29,7 @@ const find = (req, res) => {
         })
 };
 
-const search = (req, res) => {
+const searchPlayground = (req, res) => {
     // Get search term and filter data for titles with the search term
     const term = req.params.searchTerm;
     playgrounds.findAll({
@@ -106,9 +106,9 @@ const createPlayground = (req, res) => {
 }
 
 module.exports = {
-    findAll,
-    find,
-    search,
+    findAllPlaygrounds,
+    findPlaygrounds,
+    searchPlayground,
     updatePlayground,
     deletePlayground,
     createPlayground

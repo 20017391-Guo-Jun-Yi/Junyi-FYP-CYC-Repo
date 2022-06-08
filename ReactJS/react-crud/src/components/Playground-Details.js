@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
-import PlaygroundDataService from "../services/playground.service";
+import DataService from "../services/cyc-fyp.service";
 import "../style/Playground.css";
 import human from "../pictures/human.png";
 import playgroundimg from "../pictures/playground.png";
@@ -38,7 +38,7 @@ class PlaygroundDetails extends Component {
 
     // Collect Users data
     retrievePlayground(id) {
-        PlaygroundDataService.get(id)
+        DataService.getPlaygrounds(id)
             .then(response => {
                 this.setState({
                     Playground: response.data,
@@ -91,7 +91,7 @@ class PlaygroundDetails extends Component {
     // Remove playground
     deletePlayground() { 
         const id = this.state.Playground.playground_id;
-        PlaygroundDataService.delete(id)
+        DataService.deletePlaygrounds(id)
             .then(response => {
                 console.log(response.data);
                 this.refreshData();
@@ -107,7 +107,7 @@ class PlaygroundDetails extends Component {
     // Update playground
     updatePlayground() {
         const id = this.state.Playground.playground_id;
-        PlaygroundDataService.update(id, this.state.Playground)
+        DataService.updatePlaygrounds(id, this.state.Playground)
             .then(response => {
                 console.log(response.data);
                 this.refreshData(id);
@@ -125,7 +125,7 @@ class PlaygroundDetails extends Component {
 
     render() {
         if (this.state.redirect) {
-            return <Navigate to='/playground' />
+            return <Navigate to='/home/playground' />
         }
 
         const { Playground, textBoxDisabled } = this.state;

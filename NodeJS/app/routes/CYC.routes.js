@@ -1,9 +1,9 @@
 module.exports = app => {
     const user = require("../controllers/CYC.controllers.js");
     const {
-        findAll,
-        find,
-        search,
+        findAllPlaygrounds,
+        findPlaygrounds,
+        searchPlayground,
         updatePlayground,
         deletePlayground,
         createPlayground
@@ -17,9 +17,9 @@ module.exports = app => {
 
     // Playground routes
     app.use('/api/playgrounds', playground_router)
-    playground_router.get("/", findAll);
-    playground_router.get("/index/:id", find);
-    playground_router.get("/search/:searchTerm", search);
+    playground_router.get("/", findAllPlaygrounds);
+    playground_router.get("/index/:id", findPlaygrounds);
+    playground_router.get("/search/:searchTerm", searchPlayground);
     playground_router.put("/index/:id", updatePlayground);
     playground_router.delete("/delete/:id", deletePlayground);
     playground_router.post("/", createPlayground);

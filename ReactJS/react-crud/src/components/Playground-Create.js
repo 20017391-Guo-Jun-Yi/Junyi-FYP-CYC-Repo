@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
-import PlaygroundDataService from "../services/playground.service";
+import DataService from "../services/cyc-fyp.service";
 import "../style/Playground.css";
 import human from "../pictures/human.png";
 import playgroundimg from "../pictures/playground.png";
@@ -42,7 +42,7 @@ export default class PlaygroundCreate extends Component {
             playground_description: this.state.playground_description,
             playground_etc: this.state.playground_etc
         }
-        PlaygroundDataService.create(data)
+        DataService.createPlaygrounds(data)
             .then(response => {
                 console.log(response.data);
                 this.refreshState();
@@ -78,7 +78,7 @@ export default class PlaygroundCreate extends Component {
 
     render() {
         if (this.state.redirect) {
-            return <Navigate to='/playground' />
+            return <Navigate to='/home/playground' />
         }
 
         const { playground_title, playground_description, playground_etc } = this.state;
