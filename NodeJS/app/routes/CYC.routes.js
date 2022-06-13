@@ -18,9 +18,9 @@ module.exports = app => {
     // Playground routes
     app.use('/api/playgrounds', playground_router)
     playground_router.get("/", findAllPlaygrounds);
-    playground_router.get("/index/:id", findPlaygrounds);
-    playground_router.get("/search/:searchTerm", searchPlayground);
-    playground_router.put("/index/:id", updatePlayground);
-    playground_router.delete("/delete/:id", deletePlayground);
+    playground_router.get("/:id", findPlaygrounds);
+    playground_router.get("/:searchTerm", searchPlayground);
+    playground_router.put("/:id", updatePlayground);
+    playground_router.delete("/:id", deletePlayground);
     playground_router.post("/", createPlayground);
 };

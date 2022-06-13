@@ -9,7 +9,7 @@ class DataService {
   }
 
   getPlaygrounds(id) {
-    return http.get(`/playgrounds/index/${id}`);
+    return http.get(`/playgrounds/${id}`);
   }
 
   createPlaygrounds(data) {
@@ -17,15 +17,15 @@ class DataService {
   }
 
   updatePlaygrounds(id, data) {
-    return http.put(`/playgrounds/index/${id}`, data);
+    return http.put(`/playgrounds/${id}`, data);
   }
 
   deletePlaygrounds(id) {
-    return http.delete(`/playgrounds/delete/${id}`);
+    return http.delete(`/playgrounds/${id}`);
   }
 
   findByTitle(title) {
-    return http.get(`/playgrounds/search/${title}`);
+    return http.get(`/playgrounds/${title}`);
   }
 }
 
